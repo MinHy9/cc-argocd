@@ -1,0 +1,2 @@
+# cc-argocd
+argocd test
