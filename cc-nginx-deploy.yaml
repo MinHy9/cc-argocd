@@ -40,7 +40,7 @@ spec:
       topologySpreadConstraints:
         - maxSkew: 1
           topologyKey: "kubernetes.io/hostname"
-          whenUnsatisfiable: DoNotSchedule
+          whenUnsatisfiable: ScheduleAnyway
           labelSelector:
             matchLabels:
               app: nginx
@@ -85,4 +85,5 @@ spec:
               port: 80
             initialDelaySeconds: 10
             periodSeconds: 10
+
 
