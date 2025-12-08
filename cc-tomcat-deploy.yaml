@@ -48,7 +48,7 @@ spec:
 
       containers:
         - name: check-tomcat
-          image: 088784023539.dkr.ecr.ap-northeast-2.amazonaws.com/check-tomcat:v2.0
+          image: 088784023539.dkr.ecr.ap-northeast-2.amazonaws.com/check-tomcat:v3.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
