@@ -61,7 +61,7 @@ spec:
               memory: "512Mi"
           env:
             - name: DB_HOST
-              value: "10.0.3.50"     # MySQL VM IP -> VIPIP
+              value: "10.0.3.200"     # MySQL VM IP -> VIPIP
             - name: DB_PORT
               value: "3306"
             - name: DB_NAME
@@ -77,12 +77,12 @@ spec:
               path: /
               port: 8080
             initialDelaySeconds: 20
-            periodSeconds: 5
+            periodSeconds: 10
 
           livenessProbe:
             httpGet:
               path: /
               port: 8080
-            initialDelaySeconds: 10
+            initialDelaySeconds: 20
             periodSeconds: 10
 
