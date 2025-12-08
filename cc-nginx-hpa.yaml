@@ -9,11 +9,11 @@ spec:
     kind: Deployment
     name: cc-nginx-deploy
   minReplicas: 3           # 기본 3개
-  maxReplicas: 7          # 최대 7개까지
+  maxReplicas: 8
   metrics:
     - type: Resource
       resource:
         name: cpu
         target:
           type: Utilization
-          averageUtilization: 30   # nginx는 30% 기준
+          averageUtilization: 40   # nginx는 40% 기준

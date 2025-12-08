@@ -7,7 +7,7 @@ metadata:
     app: tomcat
 spec:
   replicas: 3
-  revisionHistoryLimit: 3
+  #revisionHistoryLimit: 3
 
   strategy:
     type: RollingUpdate
@@ -55,13 +55,13 @@ spec:
           resources:
             requests:
               cpu: "300m"      # 최소 보장 0.1 vCPU
-              memory: "256Mi"
+              memory: "512Mi"
             limits:
-              cpu: "500m"      # 최대 0.25 vCPU
+              cpu: "300m"      # 최대 0.25 vCPU
               memory: "512Mi"
           env:
             - name: DB_HOST
-              value: "10.0.3.200"     # MySQL VM IP -> VIPIP
+              value: "10.0.3.50"     # MySQL VM IP -> VIPIP
             - name: DB_PORT
               value: "3306"
             - name: DB_NAME
@@ -85,4 +85,3 @@ spec:
               port: 8080
             initialDelaySeconds: 60
             periodSeconds: 30
-
