@@ -48,7 +48,7 @@ spec:
 
       containers:
         - name: check-tomcat
-          image: 088784023539.dkr.ecr.ap-northeast-2.amazonaws.com/check-tomcat:v3.0
+          image: 088784023539.dkr.ecr.ap-northeast-2.amazonaws.com/check-tomcat:v4.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -76,12 +76,13 @@ spec:
             httpGet:
               path: /
               port: 8080
-            initialDelaySeconds: 60
-            periodSeconds: 30
+            initialDelaySeconds: 70
+            periodSeconds: 35
 
           livenessProbe:
             httpGet:
               path: /
               port: 8080
-            initialDelaySeconds: 60
-            periodSeconds: 30
+            initialDelaySeconds: 70
+            periodSeconds: 35
+
